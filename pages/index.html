@@ -1,10 +1,27 @@
 {% extends "templates/partials/base.html" %}
 
+{% set name = "UNB Programming Club" %}
+{% set sections = [
+  ["Projects", "projects"],
+  ["About", "about"],
+  ["Contact", "contact"],
+] %}
+
+{% set projects = [
+  ["Project 1", "project1", "https://github.com/unbprogramming", "cabin.png", "The UNB Programming Club completed Project 1"],
+  ["Project 2", "project2", "https://github.com/unbprogramming", "cabin.png", "The UNB Programming Club completed Project 2"],
+  ["Project 3", "project3", "https://github.com/unbprogramming", "cabin.png", "The UNB Programming Club completed Project 3"],
+] %}
+
 {% block content %}
 
+  {% include "templates/partials/nav.html" %}
   {% include "templates/partials/header.html" %}
-  {% include "templates/partials/portfolio-grid.html" %}
+
+  {% include "templates/partials/projects.html" %}
   {% include "templates/partials/about.html" %}
   {% include "templates/partials/contact.html" %}
+
+  {% include "templates/partials/modals.html" %}
 
 {% endblock %}

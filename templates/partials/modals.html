@@ -1,4 +1,5 @@
-<div class="portfolio-modal modal fade" id="SOMETHING" tabindex="-1" role="dialog" aria-hidden="true">
+{% for project in projects %}
+<div class="portfolio-modal modal fade" id="modal-{{ project[1] }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
             <div class="lr">
@@ -9,10 +10,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                  SOMETHING
+                  <div class="modal-body">
+                      <h2>{{ project[0] }}</h2>
+                      <hr class="star-primary">
+                      <img src="/static/images/{{ project[3] }}" class="img-responsive img-centered" alt="">
+                      <p>{{ project[4] }}</p>
+                      <a href="{{ project[2] }}" target="_blank">
+                        <button type="button" class="btn btn-default"><i class="fa fa-github"></i> View Source</button>
+                      </a>
+                  </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{{ end }}
+{{ endfor }}

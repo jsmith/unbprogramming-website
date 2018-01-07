@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-  {% set site_title = getSetting('site_name')%}
-  {% set site_description = getSetting('site_description')%}
+
+  {# Meta Information #}
+  {% set title = "UNB Programming Club" %}
+  {% set description = "The UNB Programming Club was first introduced in the 1990s. After having halted operation in 2009, the club is now back and better than ever!" %}
+  {% set keywords = "unb, programming, club, coding, fredericton, new brunswick, database, java, python, golang, go" %}
+  {% set author = "Jacob Smith" %}
 
   {% include "templates/partials/head.html" %}
 
   <body id="page-top" class="index">
-    <!-- Navigation -->
-    {% include "templates/partials/nav.html" %}
 
-    <!-- Header -->
     {% block content %}
     {% endblock %}
 

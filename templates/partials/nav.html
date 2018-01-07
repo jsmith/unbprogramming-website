@@ -7,13 +7,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#page-top">NAME</a>
+            <a class="navbar-brand" href="#page-top">{{ name }}</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden">
-                  ITEM
+                  <a href="#page-top"></a>
                 </li>
+                {% for section in sections %}
+                  <li class="page-scroll">
+                      <a href="#{{ section[1] }}">{{ section[0]  }}</a>
+                  </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
