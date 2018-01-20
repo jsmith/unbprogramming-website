@@ -1,0 +1,15 @@
+{
+  "name": "unb-programming-club",
+  "version": "1",
+  "description": "UNB Programing Club website repository.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unbprogramming/website.git"
+  },
+  "author": "Jacob Smith",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "twig": "^1.10.5"
+  }
+}

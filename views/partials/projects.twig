@@ -1,0 +1,16 @@
+{% extends "partials/section.twig" %}
+
+{% block section %}
+{% for project in projects %}
+<div class="col-sm-4 portfolio-item">
+    <a href="#modal-{{ project[1] }}" class="portfolio-link" data-toggle="modal">
+        <div class="caption">
+            <div class="caption-content">
+                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+        <img src="/images/{{ project[3] }}" class="img-responsive">
+    </a>
+</div>
+{% endfor %}
+{% endblock %}
